@@ -22,7 +22,7 @@ namespace Financeira
                         sair = true;
                     goto programa;
                 }
-                else if ((input == -1 || input == -2) && verificarOpção(input) < 0)
+                else if ((input == -1 || input == -2) && Validacoes.verificarOpção(input) < 0)
                     goto menuInicial;
                 else if (input == 1)
                 {
@@ -85,7 +85,7 @@ namespace Financeira
             int input = menuConsulta(contratosPF, contratosPJ);
             if (input == -5 || input == -3 || input == -4)
                 return input;
-            else if ((input < 0 && verificarOpção(input) < 0))
+            else if ((input < 0 && Validacoes.verificarOpção(input) < 0))
                 return -2;
             else
                 return input;
@@ -106,7 +106,7 @@ Por favor, informe CPF OU CNPJ:");
                 return -3;
             tratarString(ref input);
             int status = 0;
-            if (validaCPF(input))
+            if (Validacoes.validaCPF(input))
             {
                 status = consultaPF(input, contratosPF);
                 if (status == 1)
@@ -114,7 +114,7 @@ Por favor, informe CPF OU CNPJ:");
                 else
                     return status;
             }
-            else if (validaCNPJ(input))
+            else if (Validacoes.validaCNPJ(input))
             {
                 status = consultaPJ(input, contratosPJ);
                 if (status == 1)
@@ -251,7 +251,7 @@ SAIR - Encerrar o programa
                 return -1;
         }
         #endregion
-        #region VerificarOpção
+        /*#region VerificarOpção
         static int verificarOpção(int input)
         {
             if (input == -1 || input == -2)
@@ -261,7 +261,7 @@ SAIR - Encerrar o programa
             }
             return input;
         }
-        #endregion
+        #endregion*/
         #region telaConfirmação
         static int telaConfirmação()
         {
@@ -287,7 +287,7 @@ Deseja prosseguir?
             int input = menuCadastro(ref contratosPF, ref contratosPJ);
             if (input == -5 || input == -3 || input == -4)
                 return input;
-            else if ((input < 0 && verificarOpção(input) < 0))
+            else if ((input < 0 && Validacoes.verificarOpção(input) < 0))
                 return -2;
             else
                 return input;
@@ -310,7 +310,7 @@ Por favor, informe CPF OU CNPJ:");
                 return -3;
             tratarString(ref input);
             int status = 0;
-            if (validaCPF(input))
+            if (Validacoes.validaCPF(input))
             {
                 status = cadastrarPF(input, ref contratosPF);
                 if (status == 1)
@@ -318,7 +318,7 @@ Por favor, informe CPF OU CNPJ:");
                 else
                     return status;
             }
-            else if (validaCNPJ(input))
+            else if (Validacoes.validaCNPJ(input))
             {
                 status = cadastrarPJ(input, ref contratosPJ);
                 if (status == 1)
@@ -346,7 +346,7 @@ Por favor, informe CPF OU CNPJ:");
             input = temp.Replace("/", "");
         }
         #endregion
-        #region validaCPF
+        /*#region validaCPF
         public static bool validaCPF(string cpf)
         {
             int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -418,7 +418,7 @@ Por favor, informe CPF OU CNPJ:");
             digito = digito + resto.ToString();
             return cnpj.EndsWith(digito);
         }
-        #endregion
+        #endregion*/
         #region cadastrarPJ
         static int cadastrarPJ(string cnpj, ref List<ContratoPessoaJurídica> contratosPJ)
         {
@@ -511,12 +511,12 @@ Por favor, informe a Inscrição Estadual do Contratante:");
             else if (iEstadual == "RETORNAR")
                 return -3;
             tratarString(ref iEstadual);
-            if (validaIE(iEstadual) == false)
+            if (Validacoes.validaIE(iEstadual) == false)
                 solicitarIE(ref iEstadual);
             return 1;
         }
         #endregion
-        #region validaIE
+        /*#region validaIE
         public static bool validaIE(string iEstadual)
         {
             int lenght = iEstadual.Length;
@@ -531,7 +531,7 @@ Por favor, informe a Inscrição Estadual do Contratante:");
                 return false;
             }
         }
-        #endregion
+        #endregion*/
         #region solicitarContratante
         static int solicitarContratante(ref string contratante)
         {
