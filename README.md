@@ -17,7 +17,6 @@ Implemente o método calcularPrestacao() na(s) classe(s) necessárias.
 
 <div aligns="center">
 <img src="ClassesFluxograma.jpg" width="12000px">
-<img src="ClassesFluxograma.svg" width="12000px">
 </div>
 
 ## Pontos de atenção
