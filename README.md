@@ -16,7 +16,7 @@ Implemente o método calcularPrestacao() na(s) classe(s) necessárias.
 1.3 ) Mais métodos - Todos os contratos devem ter um método exibirInfo() ( que não retorna valor e que não tem parâmetros ) para informar o valor do contrato, o prazo e o valor da prestação. Além disso, os contratos de pessoa física devem informar também a idade do contratante.
 
 <div aligns="center">
-<img src="img/ClassesFluxograma.svg" width="12000px">
+<img src="ClassesFluxograma.svg" width="12000px">
 </div>
 
 ## Casos de teste
