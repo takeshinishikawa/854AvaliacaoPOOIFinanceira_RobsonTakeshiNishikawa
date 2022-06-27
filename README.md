@@ -19,6 +19,15 @@ Implemente o método calcularPrestacao() na(s) classe(s) necessárias.
 <img src="ClassesFluxograma.jpg" width="12000px">
 </div>
 
+## Pontos de atenção
+1) O programa foi criado de forma que o usuário não precisará explicitar se quer cadastrar um Contrato de PF ou PJ, com base na validação de CPF e CNPJ, ele irá conduzir o usuário no fluxo correto. Além disso, por conta destas validações, ele não permitirá a inclusão de contratos de CPFs e CNPJs inválidos.
+2) O programa não permitirá o fechamento de contratos com dados incorretos:
+- nome de contratante vazios;
+- prazo <= 0;
+- valores de contratos <= 0;
+- data de nascimento futura (PF);
+- inscrição estadual com número de dígitos diferente de 9 (PJ);
+
 ## Casos de teste
 
 ### Consulta de contratos sem ainda ter feito cadastro
