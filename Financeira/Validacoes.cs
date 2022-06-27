@@ -88,11 +88,11 @@ namespace Financeira
             int parser = 0;
             while (parser < lenght && (iEstadual[parser] >= '0' && iEstadual[parser] <= '9'))
                 parser++;
-            if (parser == 12)
+            if (parser == 9)
                 return true;
             else
             {
-                Console.WriteLine("Inscrição Estadual inválida! Formato esperado: \"XXX.XXX.XXX.XXX\"");
+                Console.WriteLine("Inscrição Estadual inválida! Formato esperado: \"XXX.XXX.XXX\"");
                 return false;
             }
         }

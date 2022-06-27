@@ -30,7 +30,7 @@ namespace Financeira
             long numeroIE = Convert.ToInt64(inscricaoEstadual);
             Console.WriteLine(@$"======= Contrato: {IdContrato} =======
 CNPJ do Contratante: {numeroCNPJ.ToString(@"00\.000\.000\/0000\-00")}
-Inscrição Estadual: {numeroIE.ToString(@"000\.000\.000\.000")}
+Inscrição Estadual: {numeroIE.ToString(@"000\.000\.000")}
 Nome do Contratante: {Contratante}
 Valor: R$ {Valor.ToString("F")}
 Prazo: {Prazo} {defMes}
