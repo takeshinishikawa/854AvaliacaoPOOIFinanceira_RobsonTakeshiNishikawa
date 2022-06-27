@@ -8,6 +8,7 @@ namespace Financeira
 {
     public static class Interacoes
     {
+        #region consultarContrato
         static public int consultarContrato(ref List<ContratoPessoaFísica> contratosPF, ref List<ContratoPessoaJurídica> contratosPJ)
         {
             int input = menuConsulta(contratosPF, contratosPJ);
@@ -18,6 +19,8 @@ namespace Financeira
             else
                 return input;
         }
+        #endregion
+        #region menuConsulta
         static int menuConsulta(List<ContratoPessoaFísica> contratosPF, List<ContratoPessoaJurídica> contratosPJ)
         {
         menuConsulta:
@@ -56,6 +59,8 @@ Por favor, informe CPF OU CNPJ:");
                 return -10;
             }
         }
+        #endregion
+        #region consultaPF
         static public int consultaPF(string input, List<ContratoPessoaFísica> contratosPF)
         {
             Dictionary<int, Guid> dictContratosCliente = new Dictionary<int, Guid>();
@@ -94,6 +99,9 @@ Por favor, selecione um dos contratos abaixo: ");
                 Console.WriteLine("Não existe contrato para este cliente.");
             return menuConsultarMais();
         }
+        #endregion
+        #region ConsultaPJ
+
         static public int consultaPJ(string input, List<ContratoPessoaJurídica> contratosPJ)
         {
             Dictionary<int, Guid> dictContratosCliente = new Dictionary<int, Guid>();
@@ -132,6 +140,7 @@ Por favor, selecione um dos contratos abaixo: ");
                 Console.WriteLine("Não existe contrato para este cliente.");
             return menuConsultarMais();
         }
+        #endregion
         #region menuConsultarMais
         static int menuConsultarMais()
         {
