@@ -15,10 +15,89 @@ idade > 50 tem adicional de 4,00
 Implemente o método calcularPrestacao() na(s) classe(s) necessárias.
 1.3 ) Mais métodos - Todos os contratos devem ter um método exibirInfo() ( que não retorna valor e que não tem parâmetros ) para informar o valor do contrato, o prazo e o valor da prestação. Além disso, os contratos de pessoa física devem informar também a idade do contratante.
 
-##Casos de teste
+<div aligns="center">
+<img src="img/ClassesFluxograma.svg" width="12000px">
+</div>
 
-###Consulta de contratos sem ainda ter feito cadastro
+## Casos de teste
+
+### Consulta de contratos sem ainda ter feito cadastro
 ```
 input: 2
 resultado esperado: "Não há contratos para exibir."
+```
+
+### Cadastro de data de nascimento inválida (copiar e texto abaixo dentro do Menu de Cadastro)
+```
+330.111.850-00
+cpf com separadores
+100,82
+10
+31/06/2024
+30/06/1989
+1
+
+```
+
+### Cadastro de CPF inválido (copiar e texto abaixo dentro do Menu de Cadastro)
+```
+330.111.850-05
+
+```
+### Cadastro de CNPJ inválido (copiar e texto abaixo dentro do Menu de Cadastro)
+```
+22439534000169
+18.735.723/0001-19
+
+```
+
+### Cadastro de Nome de Contratante inválido (copiar e texto abaixo dentro do Menu de Cadastro)
+```
+58.735.723/0001-19
+159.159.159.159
+123.132.123
+
+Tentativa de cadastro com nome de contratante inválido
+777,77
+7
+
+```
+
+### Cadastro de contratos com CPFs e CNPJs válidos para verificação de consulta (copiar e texto abaixo dentro do Menu de Cadastro)
+```
+330.111.850-00
+cpf com separadores
+100,82
+10
+15/06/1990
+1
+
+1
+33011185000
+CPF sem separadores
+159.59
+20
+18/07/1953
+1
+
+42.439.534/0001-69
+123123123123
+CNP com separadores
+500
+500
+1
+
+42439534000169
+456456456456
+CNPJ sem separadores
+399,99
+300
+1
+
+58.735.723/0001-19
+159.159.159
+Teste com IE com Pontos
+315,15
+2
+
 ```
